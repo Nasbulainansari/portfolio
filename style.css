@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url("https://i.pinimg.com/736x/fa/57/4c/fa574c8b43030213c7643090f9782690.jpg?utm_source=chatgpt.com");
+    background-size: cover;
+    background-attachment: fixed;  /* scroll effect */
+    background-position: center;
+    color: white
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    align-items: center;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: gray;
+    border-radius: 10px;
+    color: turquoise;
+    
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: turquoise;
+}
+nav .logo span {
+    color: #00eaff;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #00eaff;
+}
+
+.hire-btn {
+    padding: 8px 18px;
+    border: 2px solid #00eaff;
+    background: transparent;
+    color: #00eaff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hire-btn:hover {
+    background: #00eaff;
+    color: #000;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text h2 {
+    font-size: 24px;
+    color: #00eaff;
+}
+
+.hero-text p {
+    width: 70%;
+    margin: 20px 0;
+}
+
+.btn, .btn-outline {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    background: #00eaff;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+}
+.btn-outline:hover {
+    background: #00eaff;
+    color: #000;
+}
+
+/* About */
+.about {
+    display: flex;
+    align-items: center;
+    padding: 80px;
+    gap: 60px;
+}
+
+/* Skills */
+.skills {
+    padding: 80px;
+}
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.skill-card {
+    padding: 15px 25px;
+    background: #111;
+    border: 1px solid #00eaff;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.skill-card:hover {
+    transform: scale(1.1);
+    background: #00eaff;
+    color: #000;
+}
+
+/* Projects */
+.projects {
+    padding: 80px;
+}
+.project-container {
+    display: flex;
+    gap: 25px;
+}
+.project-card {
+    background: #111;
+    padding: 25px;
+    border: 1px solid #00eaff;
+    border-radius: 6px;
+    width: 30%;
+    transition: 0.4s;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    background: #00eaff;
+    color: #000;
+}
+
+/* Contact */
+.contact {
+    padding: 80px;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+.contact input, 
+.contact textarea {
+    padding: 12px;
+    background: #111;
+    border: 1px solid #00eaff;
+    color: #fff;
+}
+.contact button {
+    width: 150px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+}
+
+.social-links {
+    display: flex;
+    gap: 40px;   /* Yahan space badhao */
+    justify-content: center;
+    margin-top: 20px;
+}
+.hero-img img {
+    width: 300px;            /* photo size */
+    height: 300px;           /* square banane ke liye zaroori */
+    object-fit: cover;       /* image crop ho kar perfect circle banegi */
+    border-radius: 50%;      /* circle effect */
+    border: 3px solid black;  /* optional neon border */
+}
+/* ==========================
+   MOBILE VIEW (max-width: 768px)
+   ========================== */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+    .hero-text p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .hero-img img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 20px;
+    }
+
+    /* About Section */
+    .about {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about-img img {
+        width: 200px;
+        border-radius: 20px;
+    }
+
+    /* Skills Section */
+    .skill-container {
+        justify-content: center;
+        gap: 12px;
+    }
+    .skill-card {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* Projects Section */
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    /* Contact Section */
+    .contact form {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+/* ==========================
+   TABLET VIEW (max-width: 1024px)
+   ========================== */
+@media (max-width: 768px) {
+
+    .projects {
+        padding: 40px 20px;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column; 
+        gap: 20px;
+        align-items: center; /* Center all items */
+        width: 100%;
+    }
+
+    .project-card {
+        width: 100%;                /* full width on mobile */
+        max-width: 350px;           /* prevent too large sizing */
+        padding: 20px;
+        text-align: center;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.5);  
+        backdrop-filter: blur(6px);      /* stylish blur effect */
+    }
+
+    .project-card h3 {
+        font-size: 20px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 8px;
+    }
+}
+@media (max-width: 768px) {
+
+    /* Fix navbar overlapping hero */
+    .hero {
+        padding-top: 120px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    /* Fix hero image overlapping & size */
+    .hero-img img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 20px;
+    }
+
+    /* Fix buttons overlapping */
+    .hero-text .btn,
+    .hero-text .btn-outline {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+
